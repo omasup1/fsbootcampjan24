@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+ 
+      function validation() {  
+        document.getElementById('name_error').style.display = 'none';
+        document.getElementById('pass_error').style.display = 'none';
+       
+      var fname = document.getElementById('fname_id').value;
+      var pass = document.getElementById('pass_id').value;
+   if (fname == '' && pass == '') {
+    document.getElementById('name_error').style.display = 'inline';
+    document.getElementById('pass_error').style.display = 'inline';
+        return false;
+   }else if(fname == ''){
+         document.getElementById('name_error').style.display = 'inline';
+         return false;
+      }else if(pass == ''){
+         document.getElementById('pass_error').style.display = 'inline';
+         return false;
+      }
+    }
+ 
+  </script>
+ 
+</head>
+<body>
+  <form method="POST" onsubmit="return validation()">
+ 
+    First Name: <input type="text" id="fname_id"><br>
+   
+    <span id="name_error" style="color:red;display: none;">Name is required</span><br>
+   
+    Password: <input type="password" id="pass_id" ><br>
+ 
+    <span id="pass_error" style="color:red;display: none;">Password is required</span><br>
+   
+    <input type="submit">
+ 
+</form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+// $(selector).function( function () {
+
+// });
+
+// $('#id').addClass()
+// $('.class').text()
+// $('p').html()
+// $('h2').css()
+
+console.log(document);
+
+$(document).ready(function(){
+    // $('p').text('<h2>This is my new para</h2>'); 
+    // $('div').html('<h2>This is my new para</h2>');
+    // $('p').css('color', 'red');
+    // $('p').css(
+    //     {
+    //         "color":"red", "background-color":"yellow"
+    //     });
+    
+    $('p').addClass('color_class');
+    $('h2').removeClass('color_class');
+
+    $('#text').addClass('color_class');
+    $('.button_class').addClass('color_class');
+
+    $('.button_class').click(function(){
+        $('p').hide();
+    })
+
+});
+</script>
+<style>
+    .color_class {
+        color:red; 
+        background-color:yellow;
+    }
+</style>
+
+
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+
+<h2 class="color_class">This is where I want to remove the class</h2>
+
+<div id="text">This is My Div</div>
+
+<button class="button_class">Click Me</button>
+
+</body>
+</html>
