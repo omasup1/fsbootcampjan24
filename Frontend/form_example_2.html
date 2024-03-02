@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    
+    function validation() {
+        
+        var fname = document.getElementById('fname_id').value;
+        var pass = document.getElementById('pass_id').value;
+
+      if(fname == ''){
+        
+        var elem = document.createElement('div');
+        elem.innerHTML = '<span>Name is required</span>';
+        document.getElementById('fname').appendChild(elem);
+        return false;
+      }
+    }
+
+  </script>
+</head>
+<body>
+        
+  <form method="POST" onsubmit="return validation()">
+    <div id="fname">
+      First Name: <input type="text" id="fname_id" ><br>
+    </div>
+          
+    
+    <div id="pass">
+      Password: <input type="password" id="pass_id"><br>
+    </div>
+      
+      <input type="submit">
+
+  </form>
+
+</body>
+</html>

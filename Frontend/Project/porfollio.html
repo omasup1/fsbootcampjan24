@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: red;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Adjustments for services */
+        .service {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            margin-top: 20px;
+        }
+
+        .service p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li class="dropdown">
+                    <a href="porfollio.html" class="dropbtn">Portfolio
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li><a href="contact_me.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 style="text-align: center;">Portfolio</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service">
+                    <img src="service1.jpg" alt="Service 1 Image" style="max-width: 100%;">
+                    <h3>Service Category 1</h3>
+                    <p>Description of Service Category 1</p>
+                    <p>Additional Description 1</p>
+                    <p>Additional Description 2</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <img src="service2.jpg" alt="Service 2 Image" style="max-width: 100%;">
+                    <h3>Service Category 2</h3>
+                    <p>Description of Service Category 2</p>
+                    <p>Additional Description 1</p>
+                    <p>Additional Description 2</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <img src="service3.jpg" alt="Service 3 Image" style="max-width: 100%;">
+                    <h3>Service Category 3</h3>
+                    <p>Description of Service Category 3</p>
+                    <p>Additional Description 1</p>
+                    <p>Additional Description 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

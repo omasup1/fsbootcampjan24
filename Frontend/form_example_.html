@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title> <!-- Added a title -->
+  <script>
+    function validation() {  
+      var fname = document.getElementById('fname_id').value;
+      var pass = document.getElementById('pass_id').value;
+      var nameError = document.getElementById('name_error');
+      var passError = document.getElementById('pass_error');
+      
+      // Resetting error messages
+      nameError.style.display = 'none';
+      passError.style.display = 'none';
+      
+      // Checking for empty fields
+      if (fname.trim() === '' && pass.trim() === '') {
+        nameError.style.display = 'inline';
+        passError.style.display = 'inline';
+        return false;
+      } else if (fname.trim() === '') {    //Used trim() to remove any leading or trailing whitespaces from input values.
+        nameError.style.display = 'inline';
+        return false;
+      } else if (pass.trim() === '') {      //Used trim() to remove any leading or trailing whitespaces from input values.
+        passError.style.display = 'inline';
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form method="POST" onsubmit="return validation()">
+    First Name: <input type="text" id="fname_id"><br>
+    <span id="name_error" style="color:red;display: none;">Name is required</span><br>
+    Password: <input type="password" id="pass_id"><br>
+    <span id="pass_error" style="color:red;display: none;">Password is required</span><br>
+    <input type="submit">
+  </form>
+</body>
+</html>

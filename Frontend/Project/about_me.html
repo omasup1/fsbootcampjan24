@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .email {
+            color: #007bff;
+            text-decoration: ivory;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li class="dropdown">
+                    <a href="porfollio.html" class="dropbtn">Portfolio
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li><a href="contact_me.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="about-section">
+        <h1>About Me</h1>
+        <p>Welcome to my personal website! Here you can learn more about me and what I do.</p>
+    </div>
+
+    <div class="container" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="row">
+            <div class="col-md-6" style="text-align: center;">
+                <img src="images/Pro.jpg" alt="Your Name"
+                    style="width: 70%; height: auto; border: 1px solid whitesmoke">
+            </div>
+            <div class="col-md-6" style="text-align: left;">
+                <h2> Hi, I'm Prosper Omagoro</h2>
+                <p class="title">Proffessional Experience</p>
+                <p>Highly skilled dynamic technical, sales and business manager with over 21 years of experience in the
+                    oil and gas upstream sector a and over 2 years experience in IT. Have successfully managed over 87
+                    professional engineers in delivery of excellent service quality for major customers with annual
+                    generated revenue of over
+                    $300M, which represents a 100% increase YoY. Led a major team to delivery of the first ever
+                    deep-water Single Trip Well Completions with net savings to client of over $7M per
+                    Well. Areas of expertise include business planning, asset and people management, Quality system and
+                    risk management. My years of service has attracted multiple global corporate recognition. I have
+                    worked as a technical Engineering Manager and in various leadership roles that have championed teams
+                    in the delivery of remarkable value for our customers and organizations.
+                    .</p>
+                <p><a href="mailto:info@cloudlITtech.com" class="email">info@cloudlITtech.com</a></p>
+                <a href="https://www.linkedin.com/in/prosper-umuno-o-48997567/?originalSubdomain=ng" target="_blank"
+                    class="btn btn-primary">Learn more ...</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 70px;">
+        <!-- Section 1: What I Do -->
+        <div class="row">
+            <div class="col-md-12">
+                <h6 style="text-align: center; color: grey; font-weight: bold;">WHAT I DO</h6>
+            </div>
+        </div>
+
+        <!-- Section 2: My Services -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="text-align: center;">My Services</h2>
+            </div>
+        </div>
+
+        <!-- Section 3: Three Services in Blocks -->
+        <div class="row">
+            <div class="col-md-4" style="text-align: center;">
+                <h3>Upstream Oil & Gas Services</h3>
+                <p>We offer well solution to Oil & Gas Upstream customers</p>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <h3>IT Enterprise solution</h3>
+                <p>We offer IT solution that help enterprise gain and retain organization culture.</p>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <h3>Consultancy</h3>
+                <p>We offer consultancy services for the upstream oil and gas, QHSE and organization management.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Add an event listener to the "Learn more" anchor tag
+            $('.btn-primary').click(function (event) {
+                event.preventDefault(); // Prevent default behavior of anchor tag
+                // Make an AJAX request to the backend server
+                $.ajax({
+                    url: '/api/learn-more',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ message: 'Clicked Learn More button' }),
+                    success: function (response) {
+                        console.log('Message sent successfully');
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to send message');
+                    }
+                });
+            });
+
+            // Get the current page URL and normalize it
+            var currentPage = window.location.href.toLowerCase();
+
+            // Get all the links in the navigation
+            var navLinks = document.querySelectorAll('.navbar-nav li a');
+
+            // Loop through each link
+            navLinks.forEach(function (link) {
+                // Normalize the link's href attribute
+                var linkHref = link.href.toLowerCase();
+
+                // Check if the link's href matches the current page URL
+                if (linkHref === currentPage) {
+                    // Add 'active' class to the parent <li> element if it matches
+                    link.parentElement.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
